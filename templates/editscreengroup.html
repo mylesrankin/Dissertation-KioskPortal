@@ -1,0 +1,19 @@
+<!-- CONTENT AREA (BELOW) -->
+<h2>Edit Screen Group</h2>
+<div class="panel-group">
+
+    <div class="well well-lg">
+        <div class="container">
+            <div class="row col-md-12 custyle">
+                <p>Select 18 adverts to display on the screen group</p>
+                <ul>
+                    <li ng-repeat="advert in adverts" ng-disabled="all">
+                        <input class="checkboxes" type="checkbox" ng-model="advert.Selected" value="{{advert.Owner}}"/> {{advert.Content.title}} advert
+                    </li>
+                </ul>
+
+                <input id="test" type="button" value="Add new advert set to screen group">
+
+        </div>
+    </div>
+</div>
