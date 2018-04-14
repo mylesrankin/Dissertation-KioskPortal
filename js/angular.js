@@ -89,7 +89,7 @@ app.controller('mainController', function($scope, $route, $http) {
                         $('#password-login')[0].value = ''
                         hideLogin()
                     }, function errorCallback(res){
-                        alert(res)
+                        alert(res.data)
                     })
                     /*
                     $.ajax({ // attempt login when password and username fields have been filled out
@@ -130,9 +130,9 @@ app.controller('mainController', function($scope, $route, $http) {
             $http({
                 url: "http://localhost:3000/user/logout",
                 method: "DELETE",
-                headers: {"authtoken":"test"},
+                headers: {"authtoken":localStorage.authtoken},
                 data: {
-                    "authtoken": "test"
+                    "authtoken": localStorage.authtoken
                 }
             }).then(function successCallback(res) {
                 // if success then clear localStorage of authtoken and other headers
@@ -234,7 +234,7 @@ app.controller('screengroupsController', function($scope, $http){
 
 app.controller('editscreengroupController', function($scope, $routeParams, $http){
     $http({
-        url: "http://localhost:3000/useradverts/System",
+        url: "http://localhost:3000/useradverts/"+localStorage.username,
         method: "GET"
     }).then(function successCallback(res){
         // if success then clear localStorage of authtoken and other headers
@@ -269,8 +269,27 @@ app.controller('editscreengroupController', function($scope, $routeParams, $http
     document.getElementById('test').addEventListener('click', function(){
         $scope.save()
         $scope.selectednumber = $scope.advertnames.length
-        console.log($scope.advertnames.join())
+        if($scope.advertnames.length<18){
+            alert('Select more adverts! Only '+$scope.advertnames.length+'/18 selected')
+        }else if($scope.advertnames.length>18){
+            alert('Too many adverts selected! Please select only 18 (You selected '+$scope.advertnames.length+'/18')
+        }else{
+            $http({
+                url: "http://localhost:3000/screen/groups/"+$routeParams.id,
+                method: "PUT",
+                headers: {"authtoken":localStorage.authtoken},
+                data: {
+                    "Adverts": "("+$scope.advertnames+")"
+                }
+            }).then(function successCallback(res){
+                alert(res.data.status)
+            }, function errorCallback(res){
+                alert(res.data.status)
+            })
 
+
+        }
+        console.log($scope.advertnames.join())
     })
 
 
