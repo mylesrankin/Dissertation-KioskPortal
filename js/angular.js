@@ -189,31 +189,33 @@ app.controller('registerController', function($scope, $route, $http) {
 app.controller('screenController', function($scope, $http, $interval){
     $scope.screenTitle = "Screen Management"
 
-
-    $http({
-        url: "http://localhost:3000/screens/user/"+localStorage.username,
-        method: "GET",
-    }).then(function successCallback(res) {
-        // if success then clear localStorage of authtoken and other headers
-        console.log(res.data)
-        $scope.screens = res.data
-        for(i=0; i<$scope.screens.length; i++){
-            $scope.screenTitle = "Screen Management ("+$scope.screens[i].Owner+")"
-            if((( (new Date()) - (new Date($scope.screens[i].Live)) )/1000)/60 > 0.125 ){
-                $scope.screens[i].class = "btn btn-danger btn-xs"
-                $scope.screens[i].Live = "Offline"
-            }else{
-                $scope.screens[i].class = "btn btn-success btn-xs"
-                $scope.screens[i].Live = "Online"
+    $scope.refreshData = function(){
+        $http({
+            url: "http://localhost:3000/screens/user/"+localStorage.username,
+            method: "GET",
+        }).then(function successCallback(res) {
+            // if success then clear localStorage of authtoken and other headers
+            $scope.screens = res.data
+            for(i=0; i<$scope.screens.length; i++){
+                $scope.screenTitle = "Screen Management ("+$scope.screens[i].Owner+")"
+                if((( (new Date()) - (new Date($scope.screens[i].Live)) )/1000)/60 > 0.125 ){
+                    $scope.screens[i].class = "btn btn-danger btn-xs"
+                    $scope.screens[i].Live = "Offline"
+                }else{
+                    $scope.screens[i].class = "btn btn-success btn-xs"
+                    $scope.screens[i].Live = "Online"
+                }
             }
-        }
+            // show login form again
+        }, function errorCallback(res){
+            alert(res.data)
+        })
+    }
+    $scope.refreshData()
 
-
-     // show login form again
-    }, function errorCallback(res){
-        alert(res.data)
-    })
-
+    $interval(function(){
+        $scope.refreshData()
+    }, 5000)
 
 })
 
@@ -295,6 +297,16 @@ app.controller('editscreengroupController', function($scope, $routeParams, $http
 
 })
 
+app.controller('addscreenController', function($scope, $route, $http) {
+    $http({
+        url: "http://127.0.0.1:3000/screens/groups/user/"+localStorage.username,
+        method: "GET"
+    }).then(function successCallback(res){
+        $scope.screenGroups = res.data
+    }, function errorCallback(res){
+        console.log(res.data)
+    })
+})
 
 function mysqlTimeStampToDate(timestamp) {
     // https://dzone.com/articles/convert-mysql-datetime-js-date

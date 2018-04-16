@@ -1,23 +1,57 @@
 <!-- CONTENT AREA (BELOW) -->
-<h2>{{screenTitle}}</h2>
+<h2>Add New Screen</h2>
 <div class="panel-group">
 
     <div class="well well-lg">
         <div class="container">
-            <div class="row col-md-8 col-md-offset-1 custyle">
+
+            <div class="row col-md-6 col-md-offset-2 custyle">
+                <div class="panel-body">
+                    <form role="form">
+                        <p>To add a new screen you must generate a new Screen Token to register the screen with, this can be done below.</p>
+                        <div class="row col-md-6 col-md-offset-3">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="form-group">
+                                    <input type="text" name="tokenp1" id="token-p1" class="form-control input-sm" placeholder="XXX">
+                                </div>
+                            </div>
+
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="form-group">
+                                    <input type="text" name="username-reg" id="username-reg" class="form-control input-sm" placeholder="YYY">
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="form-group">
+                                    <input type="text" name="username-reg" id="username-reg" class="form-control input-sm" placeholder="ZZZ">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="sel1">Screen Group:</label>
+                                <select class="form-control" id="sel1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                            <input id="submit-reg" type="submit" value="Generate Token" class="btn btn-info btn-block">
+                        </div>
+
+
+                    </form>
+                </div>
                 <table class="table table-striped custab">
                     <thead>
-                    <a href="#/screens/add" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new screen</a>
                     <tr>
-                        <th>Hardware ID</th>
+                        <th>Token</th>
+                        <th>Screen Group</th>
                         <th>Owner</th>
-                        <th>Screen Group ID</th>
-                        <th>Status</th>
                         <th class="text-center">Action</th>
                     </tr>
                     </thead>
 
-                    <tr ng-repeat="screen in screens">
+                    <tr ng-repeat="token in tokens">
                         <td>{{screen.Hardware_ID}}</td>
                         <td>{{screen.Owner}}</td>
                         <td>{{screen.Screen_Group_ID}}</td>
