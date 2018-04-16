@@ -186,7 +186,7 @@ app.controller('registerController', function($scope, $route, $http) {
     });
 })
 
-app.controller('screenController', function($scope, $http){
+app.controller('screenController', function($scope, $http, $interval){
     $scope.screenTitle = "Screen Management"
 
 
@@ -199,7 +199,7 @@ app.controller('screenController', function($scope, $http){
         $scope.screens = res.data
         for(i=0; i<$scope.screens.length; i++){
             $scope.screenTitle = "Screen Management ("+$scope.screens[i].Owner+")"
-            if($scope.screens[i].Live == 0){
+            if((( (new Date()) - (new Date($scope.screens[i].Live)) )/1000)/60 > 0.125 ){
                 $scope.screens[i].class = "btn btn-danger btn-xs"
                 $scope.screens[i].Live = "Offline"
             }else{
@@ -295,6 +295,15 @@ app.controller('editscreengroupController', function($scope, $routeParams, $http
 
 })
 
+
+function mysqlTimeStampToDate(timestamp) {
+    // https://dzone.com/articles/convert-mysql-datetime-js-date
+    //function parses mysql datetime string and returns javascript Date object
+    //input has to be in this format: 2007-06-05 15:26:02
+    var regex=/^([0-9]{2,4})-([0-1][0-9])-([0-3][0-9]) (?:([0-2][0-9]):([0-5][0-9]):([0-5][0-9]))?$/;
+    var parts=timestamp.replace(regex,"$1 $2 $3 $4 $5 $6").split(' ');
+    return new Date(parts[0],parts[1]-1,parts[2],parts[3],parts[4],parts[5]);
+}
 
 function hideLogin(){
     var v = localStorage.username
