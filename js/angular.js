@@ -306,6 +306,26 @@ app.controller('addscreenController', function($scope, $route, $http) {
     }, function errorCallback(res){
         console.log(res.data)
     })
+
+    $http({
+        url: "http://127.0.0.1:3000/screen/tokens/user/"+localStorage.username,
+        headers: {"authtoken":localStorage.authtoken},
+        method: "GET"
+    }).then(function successCallback(res){
+        $scope.screenTokens = res.data
+    }, function errorCallback(res){
+        console.log(res.data)
+    })
+
+    document.getElementById('gen-token-btn').addEventListener('click', function(){
+        console.log(document.getElementById('sg-select').value)
+        var token = (document.getElementById('token-p1').value)+ "-" +(document.getElementById('token-p2').value)+ "-" +(document.getElementById('token-p3').value)
+        if((document.getElementById('token-p1').value.length)+(document.getElementById('token-p2').value.length)+(document.getElementById('token-p3').value.length)<9){
+            alert("Error: Please fill out the token boxes fully! (3 characters each box, 9 total)")
+        }else{
+
+        }
+    })
 })
 
 function mysqlTimeStampToDate(timestamp) {

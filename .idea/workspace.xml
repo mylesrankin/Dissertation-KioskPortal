@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25358857-a4b7-4173-ac31-c53dc66afb49" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/css/extra.css" afterPath="$PROJECT_DIR$/css/extra.css" />
       <change beforePath="$PROJECT_DIR$/js/angular.js" afterPath="$PROJECT_DIR$/js/angular.js" />
       <change beforePath="$PROJECT_DIR$/templates/addscreen.html" afterPath="$PROJECT_DIR$/templates/addscreen.html" />
-      <change beforePath="$PROJECT_DIR$/templates/screens.html" afterPath="$PROJECT_DIR$/templates/screens.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,20 +45,20 @@
           <file leaf-file-name="angular.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/angular.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="711">
-                  <caret line="301" column="56" lean-forward="false" selection-start-line="301" selection-start-column="56" selection-end-line="301" selection-end-column="56" />
+                <state relative-caret-position="473">
+                  <caret line="310" column="55" lean-forward="false" selection-start-line="310" selection-start-column="55" selection-end-line="310" selection-end-column="55" />
                   <folding>
-                    <marker date="1523909654736" expanded="true" signature="12188:12222" ph="..." />
+                    <marker date="1523914783660" expanded="true" signature="13126:13160" ph="..." />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="addscreen.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="addscreen.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/addscreen.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="14" column="82" lean-forward="false" selection-start-line="14" selection-start-column="82" selection-end-line="14" selection-end-column="82" />
+                <state relative-caret-position="0">
+                  <caret line="0" column="29" lean-forward="true" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
                   <folding />
                 </state>
               </provider>
@@ -116,11 +116,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="extra.css" pinned="false" current-in-tab="false">
+          <file leaf-file-name="extra.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/extra.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="255">
-                  <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+                  <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
@@ -167,7 +167,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/templates/register.html" />
-        <option value="$PROJECT_DIR$/css/extra.css" />
         <option value="$PROJECT_DIR$/templates/main.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/templates/screengroups.html" />
@@ -175,6 +174,7 @@
         <option value="$PROJECT_DIR$/templates/screens.html" />
         <option value="$PROJECT_DIR$/js/angular.js" />
         <option value="$PROJECT_DIR$/templates/addscreen.html" />
+        <option value="$PROJECT_DIR$/css/extra.css" />
       </list>
     </option>
   </component>
@@ -185,8 +185,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2557" />
-    <option name="y" value="5" />
+    <option name="x" value="2601" />
+    <option name="y" value="159" />
     <option name="width" value="2572" />
     <option name="height" value="1417" />
   </component>
@@ -283,15 +283,15 @@
       <option name="presentableId" value="Default" />
       <updated>1523568545410</updated>
       <workItem from="1523568546740" duration="40651000" />
-      <workItem from="1523821426954" duration="11332000" />
+      <workItem from="1523821426954" duration="14653000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51983000" />
+    <option name="totallyTimeSpent" value="55304000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2557" y="5" width="2572" height="1417" extended-state="0" />
+    <frame x="2601" y="159" width="2572" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14206788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -413,7 +413,7 @@
         <state relative-caret-position="4743">
           <caret line="279" column="62" lean-forward="false" selection-start-line="279" selection-start-column="62" selection-end-line="279" selection-end-column="62" />
           <folding>
-            <marker date="1523909654736" expanded="true" signature="12188:12222" ph="..." />
+            <marker date="1523914783660" expanded="true" signature="13126:13160" ph="..." />
           </folding>
         </state>
       </provider>
@@ -425,14 +425,6 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/extra.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -468,23 +460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="59" lean-forward="false" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="59" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#small#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/screens.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -505,18 +480,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/angular.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
-          <caret line="301" column="56" lean-forward="false" selection-start-line="301" selection-start-column="56" selection-end-line="301" selection-end-column="56" />
+        <state relative-caret-position="473">
+          <caret line="310" column="55" lean-forward="false" selection-start-line="310" selection-start-column="55" selection-end-line="310" selection-end-column="55" />
           <folding>
-            <marker date="1523909654736" expanded="true" signature="12188:12222" ph="..." />
+            <marker date="1523914783660" expanded="true" signature="13126:13160" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="55" column="59" lean-forward="false" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="59" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/addscreen.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="82" lean-forward="false" selection-start-line="14" selection-start-column="82" selection-end-line="14" selection-end-column="82" />
+        <state relative-caret-position="0">
+          <caret line="0" column="29" lean-forward="true" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/extra.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding />
         </state>
       </provider>
