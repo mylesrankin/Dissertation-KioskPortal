@@ -323,9 +323,39 @@ app.controller('addscreenController', function($scope, $route, $http) {
         if((document.getElementById('token-p1').value.length)+(document.getElementById('token-p2').value.length)+(document.getElementById('token-p3').value.length)<9){
             alert("Error: Please fill out the token boxes fully! (3 characters each box, 9 total)")
         }else{
-
+            $http({
+                url: "http://localhost:3000/screen/token/",
+                method: "POST",
+                headers: {"authtoken":localStorage.authtoken},
+                data: {
+                    "Token": token,
+                    "Screen_Group": document.getElementById('sg-select').value,
+                    "Owner": localStorage.username
+                }
+            }).then(function successCallback(res){
+                alert(res.data.status)
+                $route.reload()
+            }, function errorCallback(res){
+                alert(res.data.status)
+            })
         }
     })
+
+    $scope.deleteToken = function(token){
+        $http({
+            url: "http://127.0.0.1:3000/screen/token/"+token,
+            method: "DELETE",
+            headers: {
+                "authtoken":localStorage.authtoken,
+                "username": localStorage.username
+            }
+        }).then(function successCallback(res){
+            alert(res.data.status)
+            $route.reload()
+        }, function errorCallback(res){
+            console.log(res.data.status)
+        })
+    }
 })
 
 function mysqlTimeStampToDate(timestamp) {

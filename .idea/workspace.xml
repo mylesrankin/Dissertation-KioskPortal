@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25358857-a4b7-4173-ac31-c53dc66afb49" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/css/extra.css" afterPath="$PROJECT_DIR$/css/extra.css" />
       <change beforePath="$PROJECT_DIR$/js/angular.js" afterPath="$PROJECT_DIR$/js/angular.js" />
       <change beforePath="$PROJECT_DIR$/templates/addscreen.html" afterPath="$PROJECT_DIR$/templates/addscreen.html" />
     </list>
@@ -42,13 +41,13 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="angular.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="angular.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/angular.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="473">
-                  <caret line="310" column="55" lean-forward="false" selection-start-line="310" selection-start-column="55" selection-end-line="310" selection-end-column="55" />
+                <state relative-caret-position="289">
+                  <caret line="329" column="23" lean-forward="true" selection-start-line="329" selection-start-column="23" selection-end-line="329" selection-end-column="23" />
                   <folding>
-                    <marker date="1523914783660" expanded="true" signature="13126:13160" ph="..." />
+                    <marker date="1523919237392" expanded="true" signature="14227:14261" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -57,8 +56,8 @@
           <file leaf-file-name="addscreen.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/addscreen.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="29" lean-forward="true" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+                <state relative-caret-position="119">
+                  <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="40" selection-end-column="22" />
                   <folding />
                 </state>
               </provider>
@@ -116,11 +115,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="extra.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="extra.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/extra.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="255">
-                  <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+                  <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
@@ -172,9 +171,9 @@
         <option value="$PROJECT_DIR$/templates/screengroups.html" />
         <option value="$PROJECT_DIR$/templates/editscreengroup.html" />
         <option value="$PROJECT_DIR$/templates/screens.html" />
-        <option value="$PROJECT_DIR$/js/angular.js" />
-        <option value="$PROJECT_DIR$/templates/addscreen.html" />
         <option value="$PROJECT_DIR$/css/extra.css" />
+        <option value="$PROJECT_DIR$/templates/addscreen.html" />
+        <option value="$PROJECT_DIR$/js/angular.js" />
       </list>
     </option>
   </component>
@@ -283,12 +282,12 @@
       <option name="presentableId" value="Default" />
       <updated>1523568545410</updated>
       <workItem from="1523568546740" duration="40651000" />
-      <workItem from="1523821426954" duration="14653000" />
+      <workItem from="1523821426954" duration="18687000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55304000" />
+    <option name="totallyTimeSpent" value="59338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2601" y="159" width="2572" height="1417" extended-state="0" />
@@ -413,7 +412,7 @@
         <state relative-caret-position="4743">
           <caret line="279" column="62" lean-forward="false" selection-start-line="279" selection-start-column="62" selection-end-line="279" selection-end-column="62" />
           <folding>
-            <marker date="1523914783660" expanded="true" signature="13126:13160" ph="..." />
+            <marker date="1523919237392" expanded="true" signature="14227:14261" ph="..." />
           </folding>
         </state>
       </provider>
@@ -432,22 +431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/editscreengroup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/screengroups.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -478,13 +461,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/angular.js">
+    <entry file="file://$PROJECT_DIR$/css/extra.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="310" column="55" lean-forward="false" selection-start-line="310" selection-start-column="55" selection-end-line="310" selection-end-column="55" />
-          <folding>
-            <marker date="1523914783660" expanded="true" signature="13126:13160" ph="..." />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -505,19 +486,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/addscreen.html">
+    <entry file="file://$PROJECT_DIR$/templates/editscreengroup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="29" lean-forward="true" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/extra.css">
+    <entry file="file://$PROJECT_DIR$/templates/screengroups.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="476">
+          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/addscreen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="40" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/angular.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="329" column="23" lean-forward="true" selection-start-line="329" selection-start-column="23" selection-end-line="329" selection-end-column="23" />
+          <folding>
+            <marker date="1523919237392" expanded="true" signature="14227:14261" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
