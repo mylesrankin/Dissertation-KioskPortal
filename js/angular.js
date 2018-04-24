@@ -36,6 +36,26 @@ app.config(['$routeProvider',
                 templateUrl: 'templates/addscreen.html',
                 controller: 'addscreenController'
             })
+            .when('/advert/edit/:id', {
+                templateUrl: 'templates/editadvert.html',
+                controller: 'editadvertController'
+            })
+            .when('/adverts', {
+                templateUrl: 'templates/adverts.html',
+                controller: 'advertsController'
+            })
+            .when('/advert/responses/:id', {
+                templateUrl: 'templates/responses.html',
+                controller: 'viewresponsesController'
+            })
+            .when('/advert/del/:id', {
+                templateUrl: 'templates/deleteadvert.html',
+                controller: 'deleteadvertController'
+            })
+            .when('/screens/group/add', {
+                templateUrl: 'templates/addscreengroup.html',
+                controller: 'addscreengroupController'
+            })
             .otherwise({
                 redirectTo: '/'
             });
@@ -357,6 +377,134 @@ app.controller('addscreenController', function($scope, $route, $http) {
         })
     }
 })
+
+app.controller('advertsController', function($scope, $route, $http, $interval) {
+    $scope.screenTitle = "Advert Management ("+localStorage.username+")"
+
+    $scope.refreshData = function(){
+        $http({
+            url: "http://localhost:3000/useradverts/"+localStorage.username,
+            method: "GET",
+        }).then(function successCallback(res) {
+            // if success then clear localStorage of authtoken and other headers
+            for(i=0;i<res.data.length;i++){
+                res.data[i].Content = JSON.parse(res.data[i].Content)
+            }
+            $scope.adverts = res.data
+        }, function errorCallback(res){
+            alert(res.data)
+        })
+    }
+    $scope.refreshData()
+
+    $interval(function(){
+        $scope.refreshData()
+    }, 5000)
+
+})
+
+app.controller('editadvertController', function($scope, $route, $http, $routeParams) {
+    $scope.screenTitle = "Editing Advert ID:'"+$routeParams.id+"'"
+    $scope.refreshData = function(){
+        $http({
+            url: "http://127.0.0.1:3000/screen/advert/"+$routeParams.id,
+            method: "GET",
+            headers: {
+                "authtoken":localStorage.authtoken,
+                "username":localStorage.username,
+            }
+        }).then(function successCallback(res) {
+            // if success then clear localStorage of authtoken and other headers
+            for(i=0;i<res.data.length;i++){
+                res.data[i].Content = JSON.parse(res.data[i].Content)
+            }
+            $scope.advert = res.data[0]
+            console.log($scope.advert)
+        }, function errorCallback(res){
+            console.log(res.data)
+            alert(res.data)
+        })
+    }
+    $scope.refreshData()
+
+    document.getElementById("edit-submit").addEventListener('click', function(){
+        console.log($scope.advert)
+        $http({
+            url: "http://localhost:3000/screen/adverts/"+$scope.advert.ID,
+            method: "PUT",
+            headers: {
+                "authtoken":localStorage.authtoken,
+                "username":localStorage.username,
+            },
+            data: $scope.advert
+        }).then(function successCallback(res) {
+            // if success then clear localStorage of authtoken and other headers
+            alert("Success! Advert updated")
+        }, function errorCallback(res){
+            alert(res.data)
+            })
+
+    })
+})
+
+app.controller('viewresponsesController', function($scope, $route, $http, $routeParams){
+    $scope.screenTitle = "Viewing Responses for advert id:'"+$routeParams.id+"'"
+    $scope.refreshData = function(){
+        $http({
+            url: "http://127.0.0.1:3000/responses/"+$routeParams.id,
+            method: "GET",
+            headers: {
+                "authtoken":localStorage.authtoken,
+                "username":localStorage.username,
+            }
+        }).then(function successCallback(res) {
+            console.log(res)
+            // if success then clear localStorage of authtoken and other headers
+            console.log($scope.responses)
+            $scope.responses = res.data
+        }, function errorCallback(res){
+            console.log(res.data)
+            alert(res.data)
+        })
+    }
+    $scope.refreshData()
+})
+
+app.controller('deleteadvertController', function($scope, $route, $http, $routeParams) {
+    $scope.screenTitle = "Deleting Advert ID:'"+$routeParams.id+"'"
+    $scope.advertid = $routeParams.id
+    document.getElementById("del-advert").addEventListener('click', function(){
+        console.log($scope.advert)
+        $http({
+            url: "http://localhost:3000/screen/adverts/"+$routeParams.id,
+            method: "DELETE",
+            headers: {
+                "authtoken":localStorage.authtoken,
+                "username":localStorage.username,
+            }
+        }).then(function successCallback(res) {
+            // if success then clear localStorage of authtoken and other headers
+            alert(res.data.status)
+            window.location.href = "#/adverts"
+            $route.reload();
+        }, function errorCallback(res){
+            alert(res.data.status)
+            window.location.href = "#/adverts"
+            $route.reload();
+        })
+
+    })
+    document.getElementById("cancel").addEventListener('click', function() {
+        window.location.href = "#/adverts"
+        $route.reload();
+    })
+})
+
+app.controller('addscreengroupController', function($scope, $route, $http, $routeParams) {
+
+
+})
+
 
 function mysqlTimeStampToDate(timestamp) {
     // https://dzone.com/articles/convert-mysql-datetime-js-date

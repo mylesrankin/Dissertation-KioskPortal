@@ -1,0 +1,34 @@
+<!-- CONTENT AREA (BELOW) -->
+<h2>Advert Management ({{username}})</h2>
+<div class="panel-group">
+
+    <div class="well well-lg">
+        <div class="container">
+            <div class="row col-md-11 custyle">
+                <table class="table table-striped custab">
+                    <thead>
+                    <a href="#/adverts/add" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new advert</a>
+                    <tr>
+                        <th>Advert ID</th>
+                        <th>Advert Title</th>
+                        <th>Owner</th>
+                        <th>Impressions</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                    </thead>
+
+                    <tr ng-repeat="advert in adverts">
+                        <td>{{advert.ID}}</td>
+                        <td>{{advert.Content.title}}</td>
+                        <td>{{advert.Owner}}</td>
+                        <td><div class="{{screen.class}}">{{advert.Impressions}}</div></td>
+                        <td class="text-center">
+                            <a class='btn btn-info btn-xs' href="#/advert/responses/{{advert.ID}}"><span class="glyphicon glyphicon-edit"></span> View Responses</a>
+                            <a class='btn btn-info btn-xs' href="#/advert/edit/{{advert.ID}}"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                            <a href="#/advert/del/{{advert.ID}}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Delete</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,103 @@
+<h2>{{screenTitle}}</h2>
+<div class="panel-group">
+
+    <div class="well well-lg">
+        <div id="index_content" class="row justify-content-md-center">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div > <!-- here starts paginate-->
+                        <div class="panel panel-default" style="margin:5px;">
+                            <div class="panel-heading">
+		            <span itemscope itemtype="http://schema.org/Review">
+		            <h3 class="panel-title" itemprop="name">Editing Advert: {{advert.name}}</h3>
+                            </div><!--/panel-heading-->
+                            <div class="panel-body" itemprop="reviewBody">
+
+                                <h3>Edit Misc</h3>
+                                <div class="form-group">
+                                    <label for="advertTitle">Advert Title</label>
+                                    <input type="text" class="form-control" id="advertTitle" ng-model="advert.Content.title">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="advertDesc">Short Description</label>
+                                    <input type="text" class="form-control" id="advertDesc" ng-model="advert.Content.desc" >
+                                </div>
+
+                                <h3>Edit Images</h3>
+
+                                <div class="form-group">
+                                    <label for="advertThumb">Thumbnail</label>
+                                    <input type="text" class="form-control" id="advertThumb" ng-model="advert.Content.images.thumbnail">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="advertDesc">Image 1 URL</label>
+                                    <input type="text" class="form-control" id="advertImage1" ng-model="advert.Content.images.image1">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="advertDesc">Image 2 URL 600x450</label>
+                                    <input type="text" class="form-control" id="advertImage2" ng-model="advert.Content.images.image2">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="advertDesc">Image 3 URL 325x600</label>
+                                    <input type="text" class="form-control" id="advertImage3" ng-model="advert.Content.images.image3">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="advertDesc">Image 4 URL 200x200</label>
+                                    <input type="text" class="form-control" id="advertImage4" ng-model="advert.Content.images.image4">
+                                </div>
+
+                                <h3>Edit Text</h3>
+
+                                <div class="form-group">
+                                    <label for="advertTitle">Form Text Area</label>
+                                    <input type="text" class="form-control" id="advertFormText" ng-model="advert.Content.text_content.form_area_text">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="advertTitle">QRCode Text</label>
+                                    <input type="text" class="form-control" id="advertQRText" ng-model="advert.Content.text_content.qr_code_text">
+                                </div>
+
+                                <p>
+                                    <b>Edit Text Area #1 (Paragraph 1 & 2) Max 1050 Characters for each paragraph</b>
+                                    <textarea class="form-control" rows="7" id="advertTextArea2" maxlength="1050" ng-model="advert.Content.text_content.paragraph1_md.1"></textarea>
+
+                                    <textarea class="form-control" rows="7" id="advertTextArea2" maxlength="1050" ng-model="advert.Content.text_content.paragraph1_md.2"></textarea>
+                                </p>
+
+                                <p>
+                                    <b>Edit Text Area #2 (Paragraph 1 & 2) Max 1050 Characters for each paragraph</b>
+                                    <textarea class="form-control" rows="7" id="advertTextArea2" maxlength="1050" ng-model="advert.Content.text_content.paragraph2_md.1"></textarea>
+
+                                    <textarea class="form-control" rows="7" id="advertTextArea2" maxlength="1050" ng-model="advert.Content.text_content.paragraph2_md.2"></textarea>
+                                </p>
+
+                                <p>
+                                    <b>Edit Text Area #3 (Paragraph 1) Max 600 Characters</b>
+                                    <textarea class="form-control" rows="7" id="advertTextArea2" maxlength="600" ng-model="advert.Content.text_content.paragraph3_sm"></textarea>
+                                </p>
+
+                                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+		              <small>
+		              <span itemprop="name"><button id="edit-submit" class="btn btn-default">Update Advert</button></span>
+		            </span><!--/author schema -->
+                                <!--
+                              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                              <meta itemprop="datePublished" content="01-01-2016">01-01-2016
+                              -->
+                            </div><!--/panel-body-->
+                        </div><!--/panel-->
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>`
