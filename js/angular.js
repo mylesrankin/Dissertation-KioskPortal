@@ -28,9 +28,13 @@ app.config(['$routeProvider',
                 templateUrl: 'templates/screengroups.html',
                 controller: 'screengroupsController'
             })
-            .when('/screens/groups/:id', {
+            .when('/screens/groups/edit/:id', {
                 templateUrl: 'templates/editscreengroup.html',
                 controller: 'editscreengroupController'
+            })
+            .when('/screens/groups/del/:id', {
+                templateUrl: 'templates/deletescreengroup.html',
+                controller: 'deletescreengroupController'
             })
             .when('/screens/add', {
                 templateUrl: 'templates/addscreen.html',
@@ -39,6 +43,10 @@ app.config(['$routeProvider',
             .when('/advert/edit/:id', {
                 templateUrl: 'templates/editadvert.html',
                 controller: 'editadvertController'
+            })
+            .when('/advert/add', {
+                templateUrl: 'templates/addadvert.html',
+                controller: 'addadvertController'
             })
             .when('/adverts', {
                 templateUrl: 'templates/adverts.html',
@@ -206,7 +214,7 @@ app.controller('registerController', function($scope, $route, $http) {
     });
 })
 
-app.controller('screenController', function($scope, $http, $interval){
+app.controller('screenController', function($scope, $http, $interval, $route){
     $scope.screenTitle = "Screen Management"
 
     $scope.refreshData = function(){
@@ -236,6 +244,25 @@ app.controller('screenController', function($scope, $http, $interval){
     $interval(function(){
         $scope.refreshData()
     }, 5000)
+
+    $scope.deauth = function(hid){
+        if(confirm('Are you sure you want to delete this screen?')) {
+            $http({
+                url: "http://127.0.0.1:3000/screen/" + hid,
+                method: "DELETE",
+                headers: {
+                    "authtoken": localStorage.authtoken,
+                    "username": localStorage.username
+                }
+            }).then(function successCallback(res) {
+                alert(res.data.status)
+                window.location.href = "#/screens"
+                $route.reload()
+            }, function errorCallback(res) {
+                console.log(res.data.status)
+            })
+        }
+    }
 
 })
 
@@ -392,7 +419,6 @@ app.controller('advertsController', function($scope, $route, $http, $interval) {
             }
             $scope.adverts = res.data
         }, function errorCallback(res){
-            alert(res.data)
         })
     }
     $scope.refreshData()
@@ -438,12 +464,36 @@ app.controller('editadvertController', function($scope, $route, $http, $routePar
             },
             data: $scope.advert
         }).then(function successCallback(res) {
-            // if success then clear localStorage of authtoken and other headers
             alert("Success! Advert updated")
         }, function errorCallback(res){
             alert(res.data)
             })
 
+    })
+})
+
+app.controller('addadvertController', function($scope, $route, $http) {
+    console.log('test')
+    $scope.screenTitle = "Create an Advert"
+    $scope.advert = {}
+    console.log($scope.advert)
+    document.getElementById("edit-submit").addEventListener('click', function(){
+        console.log($scope.advert)
+        $http({
+            url: "http://localhost:3000/screen/adverts/",
+            method: "POST",
+            headers: {
+                "authtoken":localStorage.authtoken,
+                "username":localStorage.username,
+            },
+            data: $scope.advert
+        }).then(function successCallback(res) {
+            alert("Success! Advert created")
+            window.location.href = "#/adverts"
+            $route.reload();
+        }, function errorCallback(res){
+            alert(res.data)
+        })
     })
 })
 
@@ -500,15 +550,66 @@ app.controller('deleteadvertController', function($scope, $route, $http, $routeP
     })
 })
 
-app.controller('addscreengroupController', function($scope, $route, $http, $routeParams) {
+app.controller('deletescreengroupController', function($scope, $route, $http, $routeParams) {
+    $scope.screenTitle = "Deleting Screen Group ID:'"+$routeParams.id+"'"
+    $scope.sgid = $routeParams.id
+    document.getElementById("del-sg").addEventListener('click', function(){
+        console.log($scope.advert)
+        $http({
+            url: "http://localhost:3000/screen/groups/"+$routeParams.id,
+            method: "DELETE",
+            headers: {
+                "authtoken":localStorage.authtoken,
+                "username":localStorage.username
+            }
+        }).then(function successCallback(res) {
+            // if success then clear localStorage of authtoken and other headers
+            alert(res.data.status)
+            window.location.href = "#/screens/groups"
+            $route.reload();
+        }, function errorCallback(res){
+            alert(res.data.status)
+            window.location.href = "#/screens/groups"
+            $route.reload();
+        })
 
+    })
+    document.getElementById("cancel").addEventListener('click', function() {
+        window.location.href = "#/adverts"
+        $route.reload();
+    })
+})
+
+app.controller('addscreengroupController', function($scope, $route, $http, $routeParams) {
+    var sgname = document.getElementById("sg-name")
+    document.getElementById("create-sg-btn").addEventListener('click', function(){
+        if(sgname.value){
+            $http({
+                url: "http://localhost:3000/screen/groups/",
+                method: "POST",
+                headers: {"authtoken":localStorage.authtoken},
+                data: {
+                    "Name": sgname.value,
+                    "Owners": localStorage.username
+                }
+            }).then(function successCallback(res){
+                alert(res.data.status)
+                window.location.href = "#/screens/groups"
+                $route.reload()
+            }, function errorCallback(res){
+                alert(res.data.status)
+            })
+        }else{
+            alert("Screen Group name cannot be empty!")
+        }
+    })
 
 })
 
 
 function mysqlTimeStampToDate(timestamp) {
-    // https://dzone.com/articles/convert-mysql-datetime-js-date
-    //function parses mysql datetime string and returns javascript Date object
+    /* Code snipped from: https://dzone.com/articles/convert-mysql-datetime-js-date All credit to author */
+    // function parses mysql datetime string and returns javascript Date object
     //input has to be in this format: 2007-06-05 15:26:02
     var regex=/^([0-9]{2,4})-([0-1][0-9])-([0-3][0-9]) (?:([0-2][0-9]):([0-5][0-9]):([0-5][0-9]))?$/;
     var parts=timestamp.replace(regex,"$1 $2 $3 $4 $5 $6").split(' ');

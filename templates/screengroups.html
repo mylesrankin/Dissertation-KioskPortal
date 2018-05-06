@@ -7,9 +7,10 @@
             <div class="row col-md-11 custyle">
                 <table class="table table-striped custab">
                     <thead>
-                    <a href="#/screens/add" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new screen</a>
+                    <a href="#/screens/group/add" class="btn btn-primary btn-xs pull-right"><b>+</b> Add a new screen group</a>
                     <tr>
                         <th>Screen Group ID</th>
+                        <th>Screen Group Name</th>
                         <th>Owners</th>
                         <th>Adverts</th>
                         <th class="text-center">Action</th>
@@ -21,7 +22,8 @@
                         <td>{{group.Name}}</td>
                         <td>{{group.Owners}}</td>
                         <td>{{group.Adverts}}</td>
-                        <td class="text-center"><a class='btn btn-info btn-xs' href="#/screens/groups/{{group.ID}}"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#/screens/groups/{{group.ID}}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+                        <td class="text-center"><a class='btn btn-info btn-xs' href="#/screens/groups/edit/{{group.ID}}"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                            <a href="#/screens/groups/del/{{group.ID}}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
                     </tr>
                 </table>
             </div>

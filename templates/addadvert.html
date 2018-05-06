@@ -9,11 +9,11 @@
                         <div class="panel panel-default" style="margin:5px;">
                             <div class="panel-heading">
 		            <span itemscope itemtype="http://schema.org/Review">
-		            <h3 class="panel-title" itemprop="name">Editing Advert: {{advert.name}}</h3>
+		            <h3 class="panel-title" itemprop="name">Create an Advert</h3>
                             </div><!--/panel-heading-->
                             <div class="panel-body" itemprop="reviewBody">
 
-                                <h3>Edit Misc</h3>
+                                <h3>Misc</h3>
                                 <div class="form-group">
                                     <label for="advertTitle">Advert Title</label>
                                     <input type="text" class="form-control" id="advertTitle" ng-model="advert.Content.title">
@@ -29,7 +29,7 @@
                                     <input type="text" class="form-control" id="advertURL" ng-model="advert.Content.URL" >
                                 </div>
 
-                                <h3>Edit Images</h3>
+                                <h3>Images</h3>
 
                                 <div class="form-group">
                                     <label for="advertThumb">Thumbnail</label>
@@ -56,7 +56,7 @@
                                     <input type="text" class="form-control" id="advertImage4" ng-model="advert.Content.images.image4">
                                 </div>
 
-                                <h3>Edit Text</h3>
+                                <h3>Text</h3>
 
                                 <div class="form-group">
                                     <label for="advertFormText">Form Text Area</label>
@@ -69,27 +69,27 @@
                                 </div>
 
                                 <p>
-                                    <b>Edit Text Area #1 (Paragraph 1 & 2) Max 1050 Characters for each paragraph</b>
+                                    <b>Text Area #1 (Paragraph 1 & 2) Max 1050 Characters for each paragraph</b>
                                     <textarea class="form-control" rows="7" id="advertTextArea2" maxlength="1050" ng-model="advert.Content.text_content.paragraph1_md.1"></textarea>
 
                                     <textarea class="form-control" rows="7" id="advertTextArea2" maxlength="1050" ng-model="advert.Content.text_content.paragraph1_md.2"></textarea>
                                 </p>
 
                                 <p>
-                                    <b>Edit Text Area #2 (Paragraph 1 & 2) Max 1050 Characters for each paragraph</b>
+                                    <b>Text Area #2 (Paragraph 1 & 2) Max 1050 Characters for each paragraph</b>
                                     <textarea class="form-control" rows="7" id="advertTextArea2" maxlength="1050" ng-model="advert.Content.text_content.paragraph2_md.1"></textarea>
 
                                     <textarea class="form-control" rows="7" id="advertTextArea2" maxlength="1050" ng-model="advert.Content.text_content.paragraph2_md.2"></textarea>
                                 </p>
 
                                 <p>
-                                    <b>Edit Text Area #3 (Paragraph 1) Max 600 Characters</b>
+                                    <b>text Area #3 (Paragraph 1) Max 600 Characters</b>
                                     <textarea class="form-control" rows="7" id="advertTextArea2" maxlength="600" ng-model="advert.Content.text_content.paragraph3_sm"></textarea>
                                 </p>
 
                                 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
 		              <small>
-		              <span itemprop="name"><button id="edit-submit" class="btn btn-default">Update Advert</button></span>
+		              <span itemprop="name"><button id="edit-submit" class="btn btn-default">Add Advert</button></span>
 		            </span><!--/author schema -->
                                 <!--
                               <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
