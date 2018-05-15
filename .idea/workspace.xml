@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25358857-a4b7-4173-ac31-c53dc66afb49" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/addadvert.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/deletescreengroup.html" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/js/angular.js" afterPath="$PROJECT_DIR$/js/angular.js" />
-      <change beforePath="$PROJECT_DIR$/templates/addscreengroup.html" afterPath="$PROJECT_DIR$/templates/addscreengroup.html" />
-      <change beforePath="$PROJECT_DIR$/templates/adverts.html" afterPath="$PROJECT_DIR$/templates/adverts.html" />
+      <change beforePath="$PROJECT_DIR$/templates/addadvert.html" afterPath="$PROJECT_DIR$/templates/addadvert.html" />
       <change beforePath="$PROJECT_DIR$/templates/editadvert.html" afterPath="$PROJECT_DIR$/templates/editadvert.html" />
-      <change beforePath="$PROJECT_DIR$/templates/main.html" afterPath="$PROJECT_DIR$/templates/main.html" />
-      <change beforePath="$PROJECT_DIR$/templates/screengroups.html" afterPath="$PROJECT_DIR$/templates/screengroups.html" />
-      <change beforePath="$PROJECT_DIR$/templates/screens.html" afterPath="$PROJECT_DIR$/templates/screens.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -69,21 +61,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editadvert.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="editadvert.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/editadvert.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="81" lean-forward="false" selection-start-line="39" selection-start-column="81" selection-end-line="39" selection-end-column="81" />
+            <state relative-caret-position="391">
+              <caret line="23" column="119" lean-forward="false" selection-start-line="23" selection-start-column="119" selection-end-line="23" selection-end-column="119" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="screengroups.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="screengroups.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/screengroups.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
-              <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+              <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -92,8 +84,8 @@
       <file leaf-file-name="addadvert.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/addadvert.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="76" lean-forward="false" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
+            <state relative-caret-position="459">
+              <caret line="27" column="59" lean-forward="false" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -180,12 +172,12 @@
         <option value="$PROJECT_DIR$/templates/addscreengroup.html" />
         <option value="$PROJECT_DIR$/templates/deletescreengroup.html" />
         <option value="$PROJECT_DIR$/templates/screens.html" />
-        <option value="$PROJECT_DIR$/templates/editadvert.html" />
         <option value="$PROJECT_DIR$/templates/adverts.html" />
         <option value="$PROJECT_DIR$/templates/main.html" />
         <option value="$PROJECT_DIR$/js/angular.js" />
-        <option value="$PROJECT_DIR$/templates/addadvert.html" />
         <option value="$PROJECT_DIR$/templates/screengroups.html" />
+        <option value="$PROJECT_DIR$/templates/addadvert.html" />
+        <option value="$PROJECT_DIR$/templates/editadvert.html" />
       </list>
     </option>
   </component>
@@ -195,10 +187,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-7" />
-    <option name="width" value="2574" />
-    <option name="height" value="1407" />
+    <option name="y" value="6" />
+    <option name="width" value="2572" />
+    <option name="height" value="1401" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -294,18 +287,18 @@
       <updated>1523568545410</updated>
       <workItem from="1523568546740" duration="40651000" />
       <workItem from="1523821426954" duration="22752000" />
-      <workItem from="1524235022983" duration="47524000" />
+      <workItem from="1524235022983" duration="49367000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110927000" />
+    <option name="totallyTimeSpent" value="112770000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="7" />
+    <frame x="-7" y="6" width="2572" height="1401" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14381403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14404105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -623,26 +616,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/addadvert.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="76" lean-forward="false" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/adverts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/editadvert.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="81" lean-forward="false" selection-start-line="39" selection-start-column="81" selection-end-line="39" selection-end-column="81" />
           <folding />
         </state>
       </provider>
@@ -677,7 +654,23 @@
     <entry file="file://$PROJECT_DIR$/templates/screengroups.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
-          <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+          <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/addadvert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="59" lean-forward="false" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/editadvert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="119" lean-forward="false" selection-start-line="23" selection-start-column="119" selection-end-line="23" selection-end-column="119" />
           <folding />
         </state>
       </provider>
