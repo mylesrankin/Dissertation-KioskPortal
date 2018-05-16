@@ -7,8 +7,8 @@
  */
     // init angularjs app
 var app = angular.module('app', ['ngRoute']);
-/** Routing for the single page application **/
 
+/** Routing for the single page application **/
 app.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider
@@ -69,28 +69,13 @@ app.config(['$routeProvider',
             });
     }]);
 
+/** Global Controller ~ On all pages**/
 app.controller('mainController', function($scope, $route, $http) {
-
     $scope.username = localStorage.username
     // Footer:Info panel ajax requests
     $scope.$on('$viewContentLoaded', function () {
-
-
     });
-    /*
-    $http({
-        url: "http://localhost:3000/echo",
-        method: "POST",
-        data: {
-            "username": "test"
-        }
-    }).then(function successCallback(res) {
-        console.log(res)
-        }, function errorCallback(res){
-            console.log(res)
-        }) */
     // Login logic
-    /** Login related user logic **/
     $(document).ready(function() { // When all DOM objects have been loaded
         if(localStorage.authtoken){
             hideLogin();
@@ -119,30 +104,6 @@ app.controller('mainController', function($scope, $route, $http) {
                     }, function errorCallback(res){
                         alert(res.data)
                     })
-                    /*
-                    $.ajax({ // attempt login when password and username fields have been filled out
-                        url: "http://localhost:3000/login",
-                        type: 'POST',
-                        data: {
-                            username: $('#username-login')[0].value,
-                            password: $('#password-login')[0].value
-                        },
-                        success: function(response){
-                            // Recieve authentication token and set cookies in localStorage
-                            var t = JSON.parse(response)
-                            localStorage.setItem("authtoken", t.authtoken);
-                            localStorage.setItem("username", t.username);
-                            localStorage.setItem("userid", t.userid)
-                            $('#username-login')[0].value = ''
-                            $('#password-login')[0].value = ''
-                            console.log(localStorage.authtoken);
-                            hideLogin() // hide login box
-                        },
-                        error: function(response){
-                            // reject if details provided do not match
-                            alert("Invalid username or password");
-                        }
-                    });*/
                 }else{ // validation reject if fields are empty
                     alert("Username or password is missing")
                 }
@@ -179,7 +140,7 @@ app.controller('mainController', function($scope, $route, $http) {
 
 
 })
-
+/** Contains all logic for registration page **/
 app.controller('registerController', function($scope, $route, $http) {
     // when submit button is pressed attempt to register user
     $("#submit-reg")[0].addEventListener('click', function () {
@@ -213,11 +174,10 @@ app.controller('registerController', function($scope, $route, $http) {
         }
     });
 })
-
+/** Contains all screen logic **/
 app.controller('screenController', function($scope, $http, $interval, $route){
     $scope.screenTitle = "Screen Management"
-
-    $scope.refreshData = function(){
+    $scope.refreshData = function(){ // Refreshes screen data
         $http({
             url: "http://localhost:3000/screens/user/"+localStorage.username,
             method: "GET",
@@ -242,9 +202,9 @@ app.controller('screenController', function($scope, $http, $interval, $route){
     $scope.refreshData()
 
     $interval(function(){
-        $scope.refreshData()
+        $scope.refreshData() // Refresh screen data every 5 seconds for live status view
     }, 5000)
-
+    // Delete screen
     $scope.deauth = function(hid){
         if(confirm('Are you sure you want to delete this screen?')) {
             $http({
@@ -265,7 +225,7 @@ app.controller('screenController', function($scope, $http, $interval, $route){
     }
 
 })
-
+/** Logic for screen groups page **/
 app.controller('screengroupsController', function($scope, $http){
     $scope.screenTitle = "Screen Groups Management ("+localStorage.username+")"
     $http({
@@ -280,7 +240,7 @@ app.controller('screengroupsController', function($scope, $http){
         alert(res.data)
     })
 })
-
+/** Logic for editing screen groups **/
 app.controller('editscreengroupController', function($scope, $routeParams, $http){
     $http({
         url: "http://localhost:3000/useradverts/"+localStorage.username,
@@ -343,7 +303,7 @@ app.controller('editscreengroupController', function($scope, $routeParams, $http
 
 
 })
-
+/** logic for adding a new screen **/
 app.controller('addscreenController', function($scope, $route, $http) {
     $http({
         url: "http://127.0.0.1:3000/screens/groups/user/"+localStorage.username,
@@ -404,7 +364,7 @@ app.controller('addscreenController', function($scope, $route, $http) {
         })
     }
 })
-
+/** Logic for adverts page **/
 app.controller('advertsController', function($scope, $route, $http, $interval) {
     $scope.screenTitle = "Advert Management ("+localStorage.username+")"
 
@@ -428,7 +388,7 @@ app.controller('advertsController', function($scope, $route, $http, $interval) {
     }, 5000)
 
 })
-
+/** Logic for editing an advert **/
 app.controller('editadvertController', function($scope, $route, $http, $routeParams) {
     $scope.screenTitle = "Editing Advert ID:'"+$routeParams.id+"'"
     $scope.refreshData = function(){
@@ -471,7 +431,7 @@ app.controller('editadvertController', function($scope, $route, $http, $routePar
 
     })
 })
-
+/** Logic for adding an advert **/
 app.controller('addadvertController', function($scope, $route, $http) {
     console.log('test')
     $scope.screenTitle = "Create an Advert"
@@ -496,7 +456,7 @@ app.controller('addadvertController', function($scope, $route, $http) {
         })
     })
 })
-
+/** Logic for viewing responses pages **/
 app.controller('viewresponsesController', function($scope, $route, $http, $routeParams){
     $scope.screenTitle = "Viewing Responses for advert id:'"+$routeParams.id+"'"
     $scope.refreshData = function(){
@@ -519,7 +479,7 @@ app.controller('viewresponsesController', function($scope, $route, $http, $route
     }
     $scope.refreshData()
 })
-
+/** Logic for the deletion of adverts **/
 app.controller('deleteadvertController', function($scope, $route, $http, $routeParams) {
     $scope.screenTitle = "Deleting Advert ID:'"+$routeParams.id+"'"
     $scope.advertid = $routeParams.id
@@ -549,7 +509,7 @@ app.controller('deleteadvertController', function($scope, $route, $http, $routeP
         $route.reload();
     })
 })
-
+/** Logic for the deletion of screen groups **/
 app.controller('deletescreengroupController', function($scope, $route, $http, $routeParams) {
     $scope.screenTitle = "Deleting Screen Group ID:'"+$routeParams.id+"'"
     $scope.sgid = $routeParams.id
@@ -579,7 +539,7 @@ app.controller('deletescreengroupController', function($scope, $route, $http, $r
         $route.reload();
     })
 })
-
+/** Logic for adding screen groups **/
 app.controller('addscreengroupController', function($scope, $route, $http, $routeParams) {
     var sgname = document.getElementById("sg-name")
     document.getElementById("create-sg-btn").addEventListener('click', function(){
@@ -616,6 +576,7 @@ function mysqlTimeStampToDate(timestamp) {
     return new Date(parts[0],parts[1]-1,parts[2],parts[3],parts[4],parts[5]);
 }
 
+// Hides login box
 function hideLogin(){
     var v = localStorage.username
     var temp = "<div class='col-md-8 col-md-offset-4' id='reg' style='margin-top: 50px;text-align:right;'> Welcome, " + v + " </div>";
@@ -624,7 +585,7 @@ function hideLogin(){
     document.getElementById('account_options').style.display = "block";
     document.getElementById('loginbox').style.display = "none";
 };
-
+// Shows login box
 function showLogin(){
     document.getElementById('loginbox').style.display = "block";
     document.getElementById('welcomebox').style.display = "none";

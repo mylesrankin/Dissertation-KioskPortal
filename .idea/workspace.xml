@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25358857-a4b7-4173-ac31-c53dc66afb49" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/addadvert.html" afterPath="$PROJECT_DIR$/templates/addadvert.html" />
-      <change beforePath="$PROJECT_DIR$/templates/editadvert.html" afterPath="$PROJECT_DIR$/templates/editadvert.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/js/angular.js" afterPath="$PROJECT_DIR$/js/angular.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,13 +39,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angular.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="angular.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/angular.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="183" column="45" lean-forward="false" selection-start-line="183" selection-start-column="45" selection-end-line="183" selection-end-column="45" />
+            <state relative-caret-position="1069">
+              <caret line="219" column="31" lean-forward="true" selection-start-line="219" selection-start-column="31" selection-end-line="219" selection-end-column="31" />
               <folding>
-                <marker date="1525401149068" expanded="true" signature="23317:23351" ph="..." />
+                <marker date="1526474081980" expanded="true" signature="22248:22282" ph="..." />
               </folding>
             </state>
           </provider>
@@ -61,7 +61,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editadvert.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="editadvert.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/editadvert.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
@@ -174,10 +174,10 @@
         <option value="$PROJECT_DIR$/templates/screens.html" />
         <option value="$PROJECT_DIR$/templates/adverts.html" />
         <option value="$PROJECT_DIR$/templates/main.html" />
-        <option value="$PROJECT_DIR$/js/angular.js" />
         <option value="$PROJECT_DIR$/templates/screengroups.html" />
         <option value="$PROJECT_DIR$/templates/addadvert.html" />
         <option value="$PROJECT_DIR$/templates/editadvert.html" />
+        <option value="$PROJECT_DIR$/js/angular.js" />
       </list>
     </option>
   </component>
@@ -187,7 +187,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="y" value="6" />
     <option name="width" value="2572" />
@@ -287,15 +287,15 @@
       <updated>1523568545410</updated>
       <workItem from="1523568546740" duration="40651000" />
       <workItem from="1523821426954" duration="22752000" />
-      <workItem from="1524235022983" duration="49367000" />
+      <workItem from="1524235022983" duration="50615000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112770000" />
+    <option name="totallyTimeSpent" value="114018000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="6" width="2572" height="1401" extended-state="1" />
+    <frame x="-7" y="6" width="2572" height="1401" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14404105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -369,7 +369,7 @@
         <state relative-caret-position="5508">
           <caret line="324" column="14" lean-forward="false" selection-start-line="324" selection-start-column="14" selection-end-line="324" selection-end-column="14" />
           <folding>
-            <marker date="1525401149068" expanded="true" signature="23317:23351" ph="..." />
+            <marker date="1526474081980" expanded="true" signature="22248:22282" ph="..." />
           </folding>
         </state>
       </provider>
@@ -502,7 +502,7 @@
         <state relative-caret-position="4743">
           <caret line="279" column="62" lean-forward="false" selection-start-line="279" selection-start-column="62" selection-end-line="279" selection-end-column="62" />
           <folding>
-            <marker date="1525401149068" expanded="true" signature="23317:23351" ph="..." />
+            <marker date="1526474081980" expanded="true" signature="22248:22282" ph="..." />
           </folding>
         </state>
       </provider>
@@ -624,16 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/angular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="183" column="45" lean-forward="false" selection-start-line="183" selection-start-column="45" selection-end-line="183" selection-end-column="45" />
-          <folding>
-            <marker date="1525401149068" expanded="true" signature="23317:23351" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1249">
@@ -672,6 +662,16 @@
         <state relative-caret-position="391">
           <caret line="23" column="119" lean-forward="false" selection-start-line="23" selection-start-column="119" selection-end-line="23" selection-end-column="119" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/angular.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1069">
+          <caret line="219" column="31" lean-forward="true" selection-start-line="219" selection-start-column="31" selection-end-line="219" selection-end-column="31" />
+          <folding>
+            <marker date="1526474081980" expanded="true" signature="22248:22282" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
